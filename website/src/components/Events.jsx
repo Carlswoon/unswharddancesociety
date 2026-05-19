@@ -6,7 +6,7 @@ import event3 from "../assets/events/event 3.png";
 
 function Events() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-32">
+    <section className="max-w-7xl mx-auto px-6 py-32 translate-x-[5vw]">
 
       {/* Heading */}
       <div className="flex items-center justify-between mb-12">

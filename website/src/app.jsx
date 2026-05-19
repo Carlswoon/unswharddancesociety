@@ -1,13 +1,9 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Events from "./components/Events";
+import Home from "./pages/Home.jsx";
 
 function App() {
   return (
     <div className="bg-black text-white overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <Events />
+      <Home />
     </div>
   );
 }

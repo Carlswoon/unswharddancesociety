@@ -85,7 +85,6 @@ function FrameLeft() {
           L660 95
           L700 135
           L840 135
-          L860 120
         "
         fill="none"
         stroke="url(#leftGradient)"
@@ -101,7 +100,6 @@ function FrameLeft() {
           L660 95
           L700 135
           L840 135
-          L860 120
         "
         fill="none"
         stroke="url(#leftGradient)"
@@ -136,7 +134,7 @@ function FrameRight() {
       {/* GLOW */}
       <path
         d="
-          M40 120
+          M60 135
           L60 135
           L200 135
           L240 95
@@ -152,7 +150,7 @@ function FrameRight() {
       {/* SHARP */}
       <path
         d="
-          M40 120
+          M60 135
           L60 135
           L200 135
           L240 95
@@ -176,29 +174,68 @@ function Navbar() {
           relative
           h-[clamp(7rem,10vw,10rem)]
           overflow-hidden
-          backdrop-blur-md
-          bg-[linear-gradient(to_right,#020617,#0b0f2a,#120d2f,#0b0f2a,#020617)]
         "
       >
+        {/* NAVBAR PANEL */}
+    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
 
-        {/* BACKGROUND GLOW */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(110,86,255,0.18),transparent_60%)]" />
+      {/* MAIN PANEL */}
+      <div
+        className="
+          absolute
+          left-0
+          top-0
+          w-full
+          h-[65%]
+          bg-[#050816]
+          backdrop-blur-xl
+          border-t
+          border-white/5
+        " style={{
+  background: `
+    linear-gradient(
+      90deg,
 
-        {/* SHIMMER */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="
-              absolute
-              top-0
-              left-[-30%]
-              h-full
-              w-[40%]
-              bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.05),transparent)]
-              animate-[shine_7s_linear_infinite]
-            "
-          />
-        </div>
+      rgba(5,8,22,0.82) 0%,
+      rgba(17,19,37,0.72) 28%,
 
+      rgba(29,26,56,0.58) 37%,
+      rgba(29,26,56,0.58) 63%,
+
+      rgba(17,19,37,0.72) 72%,
+      rgba(5,8,22,0.82) 100%
+    )
+  `,
+}}
+      />
+
+      {/* CENTER TRAPEZIUM */}
+      <div
+        className="
+          absolute
+          left-1/2
+          -translate-x-1/2
+          top-[65%]
+          w-[33%]
+          h-[25%]
+          bg-[#050816]
+          backdrop-blur-xl
+          border-b
+          border-none
+        "
+        style={{
+          clipPath:
+            "polygon(10% 0%, 90% 0%, 83.5% 100%, 16.5% 100%)",background: `
+    linear-gradient(
+      90deg,
+      rgba(29,26,56,0.58 0%,
+      rgba(29,26,56,0.58 100%
+    )
+  `,
+        }}
+      />
+    </div>
+        
         {/* LEFT SIDE */}
         <div
           className="
