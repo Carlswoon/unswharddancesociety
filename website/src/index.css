@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body,
 #root {
@@ -56,4 +50,90 @@ button {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.rave-button {
+  --glow-color: rgb(155, 109, 255);
+  --glow-spread-color: rgba(124, 58, 237, 0.55);
+  --enhanced-glow-color: rgb(220, 200, 255);
+  --btn-color: rgb(20, 18, 40);
+
+  border: 0.14em solid var(--glow-color);
+
+  padding: 1.1em 3.2em;
+
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  background-color: rgba(5, 8, 22, 0.55);
+
+  border-radius: 0.7em;
+
+  outline: none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition: all 0.3s ease;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 0.6em 0.15em var(--glow-color),
+    0 0 2em 0.45em var(--glow-spread-color),
+    inset 0 0 0.5em 0.15em var(--glow-color);
+
+  text-shadow:
+    0 0 0.4em var(--enhanced-glow-color);
+}
+
+.rave-button::after {
+  pointer-events: none;
+
+  content: "";
+
+  position: absolute;
+
+  top: 120%;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--glow-spread-color);
+
+  filter: blur(1.4em);
+
+  opacity: 0.28;
+
+  transform:
+    perspective(1.5em)
+    rotateX(35deg)
+    scale(1, 0.55);
+}
+
+.rave-button:hover {
+  color: white;
+
+  background-color: rgb(124, 58, 237);
+
+  box-shadow:
+    0 0 0.8em 0.2em var(--glow-color),
+    0 0 3em 1.2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.2em var(--glow-color);
+
+  transform: translateY(-2px);
+}
+
+.rave-button:active {
+  transform: scale(0.97);
+
+  box-shadow:
+    0 0 0.5em 0.15em var(--glow-color),
+    0 0 2em 1em var(--glow-spread-color),
+    inset 0 0 0.4em 0.15em var(--glow-color);
 }

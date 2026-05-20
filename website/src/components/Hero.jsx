@@ -19,21 +19,18 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.15),transparent_65%)]" />
 
       {/* CONTENT WRAPPER */}
-      <div className="relative z-10 h-screen w-full">
+      <div className="relative z-10 min-h-screen w-full px-6 sm:px-10 md:px-16">
 
         {/* HERO CONTENT */}
         <div
           className="
-            h-full
+            min-h-screen
             flex
             flex-col
             justify-center
             items-start
-
             max-w-[720px]
-            pl-[12vw]
-            pt-[6vh]
-            translate-x-[5vw]
+            gap-6
           "
         >
 
@@ -42,10 +39,10 @@ function Hero() {
             className="
               text-[#d946ef]
               uppercase
-              tracking-[0.35em]
-              text-[0.8rem]
+              tracking-[0.28em]
+              text-[0.7rem]
+              sm:text-[0.8rem]
               md:text-sm
-              mb-6
               font-medium
             "
           >
@@ -57,12 +54,11 @@ function Hero() {
             className="
               font-black
               uppercase
-              leading-[0.88]
-              tracking-[-0.06em]
-
+              leading-[0.9]
+              tracking-[-0.04em]
               text-white
 
-              text-[clamp(3.8rem,6vw,7rem)]
+              text-[clamp(3rem,14vw,7rem)]
             "
           >
             HARDER.
@@ -78,13 +74,13 @@ function Hero() {
           {/* DESCRIPTION */}
           <p
             className="
-              mt-8
               max-w-[540px]
 
               text-white/65
               leading-relaxed
 
-              text-[1rem]
+              text-[0.95rem]
+              sm:text-[1rem]
               md:text-[1.1rem]
             "
           >
@@ -94,58 +90,13 @@ function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-5 mt-10">
-
-            <button
-              className="
-                h-[58px]
-                px-8
-
-                rounded-full
-
-                bg-[#7c3aed]
-                hover:bg-[#8b5cf6]
-
-                transition-all
-
-                text-white
-                font-semibold
-
-                shadow-[0_0_35px_rgba(124,58,237,0.45)]
-              "
-            >
-              Upcoming Events
+          <div className="pt-6 sm:pt-8 md:pt-10">
+            <button className="rave-button">
+              Join Us
             </button>
-
-            <button
-              className="
-                h-[58px]
-                px-8
-
-                rounded-full
-
-                border
-                border-purple-500/40
-
-                bg-black/20
-                backdrop-blur-sm
-
-                hover:border-purple-400
-                hover:bg-purple-500/10
-
-                transition-all
-
-                text-white
-                font-semibold
-              "
-            >
-              Join The Society
-            </button>
-
           </div>
 
         </div>
-
       </div>
     </section>
   );
