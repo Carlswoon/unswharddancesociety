@@ -16,7 +16,7 @@ function NavLink({ label, active, setActive }) {
         relative
         uppercase
         tracking-[0.22em]
-        text-[clamp(0.8rem,1vw,1rem)]
+        text-[clamp(0.5rem,1vw,1rem)]
         transition-all
         duration-300
         pb-6
@@ -180,60 +180,59 @@ function Navbar() {
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
 
       {/* MAIN PANEL */}
-      <div
-        className="
-          absolute
-          left-0
-          top-0
-          w-full
-          h-[65%]
-          bg-[#050816]
-          backdrop-blur-xl
-          border-t
-          border-white/5
-        " style={{
-  background: `
-    linear-gradient(
-      90deg,
+        <div
+          className="
+            absolute
+            left-0
+            top-0
+            w-full
+            h-[65%]
+            border-t
+            border-white/5
+          "
+          style={{
+            background: `
+              linear-gradient(
+                90deg,
 
-      rgba(5,8,22,0.82) 0%,
-      rgba(17,19,37,0.72) 28%,
+                rgba(5,8,22,0.82) 0%,
+                rgba(17,19,37,0.72) 28%,
 
-      rgba(29,26,56,0.58) 37%,
-      rgba(29,26,56,0.58) 63%,
+                rgba(29,26,56,0.58) 37%,
+                rgba(29,26,56,0.58) 63%,
 
-      rgba(17,19,37,0.72) 72%,
-      rgba(5,8,22,0.82) 100%
-    )
-  `,
-}}
-      />
+                rgba(17,19,37,0.72) 72%,
+                rgba(5,8,22,0.82) 100%
+              )
+            `,
+          }}
+        />
 
-      {/* CENTER TRAPEZIUM */}
-      <div
-        className="
-          absolute
-          left-1/2
-          -translate-x-1/2
-          top-[65%]
-          w-[33%]
-          h-[25%]
-          bg-[#050816]
-          backdrop-blur-xl
-          border-b
-          border-none
-        "
-        style={{
-          clipPath:
-            "polygon(10% 0%, 90% 0%, 83.5% 100%, 16.5% 100%)",background: `
-    linear-gradient(
-      90deg,
-      rgba(29,26,56,0.58 0%,
-      rgba(29,26,56,0.58 100%
-    )
-  `,
-        }}
-      />
+        {/* CENTER TRAPEZIUM */}
+        <div
+          className="
+            absolute
+            left-1/2
+            -translate-x-1/2
+            top-[65%]
+            w-[33%]
+            h-[25%]
+            border-b
+            border-none
+          "
+          style={{
+            clipPath:
+              "polygon(10% 0%, 90% 0%, 83.5% 100%, 16.5% 100%)",
+
+            background: `
+              linear-gradient(
+                90deg,
+                rgba(29,26,56,0.58) 0%,
+                rgba(29,26,56,0.58) 100%
+              )
+            `,
+          }}
+        />
     </div>
         
         {/* LEFT SIDE */}
@@ -316,7 +315,7 @@ function Navbar() {
             -translate-x-1/2
             -translate-y-1/2
             z-30
-            w-[clamp(10rem,20vw,20rem)]
+            w-[clamp(5rem,20vw,20rem)]
             opcaity-90
           "
         >
