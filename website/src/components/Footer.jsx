@@ -137,7 +137,7 @@ function Footer() {
             text-white/35
           "
         >
-          © 2024 UNSW Hard Dance Society
+          © 2026 UNSW Hard Dance Society
         </div>
       </div>
     </footer>
