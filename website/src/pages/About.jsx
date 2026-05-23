@@ -5,8 +5,10 @@ import { useEffect, useRef } from "react";
 export default function AboutUs() {
   const canvasRef = useRef(null);
   const audioRef = useRef(null);
+  const toggleAudioRef = useRef(null);
 
   useEffect(() => {
+    let isPlaying = false;
     const canvas = canvasRef.current;
 
     if (!canvas) return;
@@ -79,10 +81,19 @@ export default function AboutUs() {
     logo.src = "/wing-logo.png";
 
     // =========================
-    // AUDIO START
+    // AUDIO TOGGLE
     // =========================
 
-    const startAudio = async () => {
+    const loopStart = 48;
+    const loopEnd = 80;
+
+    const handleLoop = () => {
+      if (audio.currentTime >= loopEnd) {
+        audio.currentTime = loopStart;
+      }
+    };
+
+    const toggleAudio = async () => {
       if (
         audioContext.state ===
         "suspended"
@@ -90,20 +101,34 @@ export default function AboutUs() {
         await audioContext.resume();
       }
 
-      audio.volume = 0.45;
+      if (!isPlaying) {
+        audio.volume = 0.45;
 
-      audio.play();
+        if (
+          audio.currentTime <
+          loopStart
+        ) {
+          audio.currentTime =
+            loopStart;
+        }
+
+        await audio.play();
+
+        isPlaying = true;
+      } else {
+        audio.pause();
+
+        isPlaying = false;
+      }
     };
 
-    window.addEventListener(
-      "click",
-      startAudio
+    toggleAudioRef.current = toggleAudio;
+    
+    audio.addEventListener(
+      "timeupdate",
+      handleLoop
     );
 
-    window.addEventListener(
-      "resize",
-      resizeCanvas
-    );
 
     // =========================
     // DRAW
@@ -400,16 +425,13 @@ export default function AboutUs() {
 
       audio.pause();
 
+      isPlaying = false;
+
       audioContext.close();
 
       window.removeEventListener(
         "resize",
         resizeCanvas
-      );
-
-      window.removeEventListener(
-        "click",
-        startAudio
       );
     };
   }, []);
@@ -425,7 +447,7 @@ export default function AboutUs() {
 
       {/* AUDIO */}
 
-      <audio ref={audioRef} loop>
+      <audio ref={audioRef}>
         <source
           src="/Home.mp3"
           type="audio/mp3"
@@ -576,7 +598,10 @@ export default function AboutUs() {
 
               <canvas
                 ref={canvasRef}
-                className="w-full h-full"
+                className="w-full h-full cursor-pointer"
+                 onClick={() =>
+                    toggleAudioRef.current?.()
+                  }
               />
 
             </div>
