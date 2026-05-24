@@ -43,73 +43,16 @@ export default function EventCard2({
         hover:border-fuchsia-400/40
         hover:shadow-[0_0_40px_rgba(217,70,239,0.12)]
 
-        lg:grid-cols-[120px_1.2fr_1fr_140px]
+        lg:grid-cols-[1.3fr_1fr_140px]
       "
     >
-
-      {/* DATE */}
-      <div
-        className="
-          flex
-          flex-col
-          items-center
-          justify-center
-
-          border-b
-          border-fuchsia-500/10
-
-          py-10
-
-          lg:border-b-0
-          lg:border-r
-        "
-      >
-
-        <p
-          className="
-            text-sm
-            uppercase
-            tracking-[0.3em]
-            text-fuchsia-400
-          "
-        >
-          {month}
-        </p>
-
-        <h2
-          className="
-            mt-2
-
-            text-6xl
-            font-black
-
-            text-fuchsia-500
-          "
-        >
-          {day}
-        </h2>
-
-        <p
-          className="
-            mt-1
-
-            text-sm
-            uppercase
-            tracking-[0.3em]
-
-            text-white/50
-          "
-        >
-          {weekday}
-        </p>
-
-      </div>
 
       {/* IMAGE */}
       <div
         className="
           relative
           overflow-hidden
+
           border-b
           border-fuchsia-500/10
 
@@ -118,6 +61,7 @@ export default function EventCard2({
         "
       >
 
+        {/* IMAGE */}
         <img
           src={image}
           alt={title}
@@ -133,7 +77,7 @@ export default function EventCard2({
           "
         />
 
-        {/* OVERLAY */}
+        {/* DARK OVERLAY */}
         <div
           className="
             absolute
@@ -145,6 +89,76 @@ export default function EventCard2({
             to-transparent
           "
         />
+
+        {/* DATE OVERLAY */}
+        <div
+          className="
+            absolute
+            top-5
+            left-5
+            z-20
+
+            flex
+            flex-col
+            items-center
+
+            rounded-2xl
+            border
+            border-fuchsia-500/20
+
+            bg-black/50
+            backdrop-blur-md
+
+            px-5
+            py-4
+          "
+        >
+
+          {/* MONTH */}
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.3em]
+
+              text-fuchsia-400
+            "
+          >
+            {month}
+          </p>
+
+          {/* DAY */}
+          <h2
+            className="
+              mt-1
+
+              text-5xl
+              font-black
+
+              leading-none
+
+              text-fuchsia-500
+            "
+          >
+            {day}
+          </h2>
+
+          {/* WEEKDAY */}
+          <p
+            className="
+              mt-1
+
+              text-xs
+              uppercase
+              tracking-[0.3em]
+
+              text-white/60
+            "
+          >
+            {weekday}
+          </p>
+
+        </div>
 
       </div>
 
