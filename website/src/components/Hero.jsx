@@ -1,6 +1,11 @@
-import heroBg from "../assets/backgrounds/hero.png";
-
-function Hero() {
+export default function Hero({
+  label,
+  title,
+  description,
+  backgroundImage,
+  primaryButton,
+  secondaryButton,
+}) {
   return (
     <section className="relative min-h-screen overflow-hidden">
 
@@ -12,7 +17,7 @@ function Hero() {
           scale-105
         "
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(${backgroundImage})`,
         }}
       />
 
@@ -82,7 +87,7 @@ function Hero() {
                 font-medium
               "
             >
-              UNITED BY MUSIC
+              {label}
             </p>
 
             {/* TITLE */}
@@ -104,28 +109,7 @@ function Hero() {
                 mb-8
               "
             >
-
-              HARDER.
-
-              <br />
-
-              TOGETHER.
-
-              <br />
-
-              <span className="
-                bg-gradient-to-r
-                from-[#f0abfc]
-                via-[#d946ef]
-                to-[#9333ea]
-                bg-clip-text
-                text-transparent
-              ">
-
-                FOREVER.
-
-              </span>
-
+              {title}
             </h1>
 
             {/* DESCRIPTION */}
@@ -145,115 +129,120 @@ function Hero() {
                 mb-12
               "
             >
-
-              The home of Hard Dance at
-              UNSW. Bringing the community
-              together through our passion
-              for harder styles.
-
+              {description}
             </p>
 
             {/* BUTTONS */}
             <div className="flex flex-wrap items-center gap-5">
 
               {/* PRIMARY */}
-              <button
-                className="
-                  group
-                  relative
-                  overflow-hidden
+              {primaryButton && (
+                <a
+                  href={primaryButton.href}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
 
-                  bg-gradient-to-b
-                  from-[#d946ef]
-                  to-[#9333ea]
+                    bg-gradient-to-b
+                    from-[#d946ef]
+                    to-[#9333ea]
 
-                  hover:brightness-110
+                    hover:brightness-110
 
-                  transition-all
+                    transition-all
 
-                  px-8 py-4
-                  sm:px-10 sm:py-5
+                    px-8 py-4
+                    sm:px-10 sm:py-5
 
-                  rounded-[1.2rem]
+                    rounded-[1.2rem]
 
-                  inline-flex
-                  items-center
-                  gap-5
+                    inline-flex
+                    items-center
+                    gap-5
 
-                  shadow-[0_0_50px_rgba(168,85,247,0.45)]
-                "
-              >
+                    shadow-[0_0_50px_rgba(168,85,247,0.45)]
+                  "
+                >
 
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <span className="
-                  relative z-10
-                  font-semibold
-                  tracking-wide
+                  <span
+                    className="
+                      relative z-10
+                      font-semibold
+                      tracking-wide
 
-                  text-base
-                  sm:text-lg
-                ">
+                      text-base
+                      sm:text-lg
+                    "
+                  >
 
-                  JOIN US
+                    {primaryButton.text}
 
-                </span>
+                  </span>
 
-                <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
+                  <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
 
-                  →
+                    →
 
-                </span>
+                  </span>
 
-              </button>
+                </a>
+              )}
 
               {/* SECONDARY */}
-              <button
-                className="
-                  group
-                  relative
-                  overflow-hidden
+              {secondaryButton && (
+                <a
+                  href={secondaryButton.href}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
 
-                  border
-                  border-[#9333ea]
+                    border
+                    border-[#9333ea]
 
-                  hover:border-[#c084fc]
+                    hover:border-[#c084fc]
 
-                  transition-all
+                    transition-all
 
-                  px-8 py-4
-                  sm:px-10 sm:py-5
+                    px-8 py-4
+                    sm:px-10 sm:py-5
 
-                  rounded-[1.2rem]
+                    rounded-[1.2rem]
 
-                  inline-flex
-                  items-center
-                  gap-5
-                "
-              >
+                    inline-flex
+                    items-center
+                    gap-5
+                  "
+                >
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#9333ea]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#9333ea]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <span className="
-                  relative z-10
-                  font-semibold
-                  tracking-wide
+                  <span
+                    className="
+                      relative z-10
+                      font-semibold
+                      tracking-wide
 
-                  text-base
-                  sm:text-lg
-                ">
+                      text-base
+                      sm:text-lg
+                    "
+                  >
 
-                  EXPLORE EVENTS
+                    {secondaryButton.text}
 
-                </span>
+                  </span>
 
-                <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
+                  <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
 
-                  →
+                    →
 
-                </span>
+                  </span>
 
-              </button>
+                </a>
+              )}
 
             </div>
           </div>
@@ -262,5 +251,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;

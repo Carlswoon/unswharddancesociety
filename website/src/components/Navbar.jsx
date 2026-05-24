@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logos/hard_dance_soc_logo_white.png";
 
 const navItemsLeft = ["HOME", "EVENTS"];
@@ -6,10 +7,17 @@ const navItemsRight = ["ABOUT", "TEAM"];
 
 function NavLink({ label, active, setActive }) {
   const isActive = active === label;
+  
+  const routes = {
+    HOME: "/",
+    EVENTS: "/events",
+    ABOUT: "/about",
+    TEAM: "/team",
+  };
 
   return (
-    <a
-      href="#"
+    <Link
+      to={routes[label]}
       onMouseEnter={() => setActive(label)}
       onMouseLeave={() => setActive(null)}
       className="
@@ -36,7 +44,7 @@ function NavLink({ label, active, setActive }) {
           absolute
           left-1/2
           -translate-x-1/2
-          bottom-[-0.65rem]
+          bottom-[0.1rem]
           h-[2px]
           rounded-full
           transition-all
@@ -52,7 +60,7 @@ function NavLink({ label, active, setActive }) {
             : "none",
         }}
       />
-    </a>
+    </Link>
   );
 }
 

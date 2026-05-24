@@ -1,10 +1,20 @@
-import Home from "./pages/Home.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Events from "./pages/Events";
+import About from "./pages/About";
+import Team from "./pages/Team";
 
 function App() {
   return (
-    <div className="bg-black text-white overflow-x-hidden">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
