@@ -33,7 +33,6 @@ const teamMembers = [
     image: vanessa,
 
     instagram: "https://instagram.com",
-    email: "arya@unswhd.com",
   },
 
   {
@@ -47,7 +46,6 @@ const teamMembers = [
     image: carlson,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
 
   {
@@ -61,7 +59,6 @@ const teamMembers = [
     image: bel,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
 
   {
@@ -75,7 +72,6 @@ const teamMembers = [
     image: parisha,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
   {
     name: "Vladyslav Klymenko",
@@ -88,7 +84,6 @@ const teamMembers = [
     image: vlad,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
   {
     name: "Madison Virtudazo",
@@ -101,7 +96,6 @@ const teamMembers = [
     image: madison,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
   {
     name: "Rita Nip",
@@ -114,10 +108,7 @@ const teamMembers = [
     image: rita,
 
     instagram: "https://instagram.com",
-    email: "mia@unswhd.com",
   },
-
-  // etc...
 ];
 
 export default function MeetTheTeam() {
@@ -144,7 +135,7 @@ export default function MeetTheTeam() {
   return (
     <section
       id="team"
-      className="mx-auto max-w-7xl px-6 py-24"
+      className="class=relative z-10 max-w-[1800px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 py-16"
     >
 
       {/* SECTION HEADER */}
