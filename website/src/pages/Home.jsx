@@ -56,8 +56,8 @@ export default function Home() {
         }}
 
         secondaryButton={{
-          text: "JOIN THE SOCIETY",
-          href: "/join",
+          text: "MEET THE TEAM",
+          href: "/team",
         }}
 
       />

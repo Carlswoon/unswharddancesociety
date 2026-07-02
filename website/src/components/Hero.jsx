@@ -14,7 +14,7 @@ export default function Hero({
         className="
           absolute inset-0
           bg-cover bg-center
-          scale-105
+          scale-100
         "
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -29,9 +29,6 @@ export default function Hero({
 
       {/* TOP FADE */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#05010b]/70 via-transparent to-[#05010b]" />
-
-      {/* GRID OVERLAY */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
       {/* BOTTOM BORDER */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#9333ea]/50 to-transparent z-20" />

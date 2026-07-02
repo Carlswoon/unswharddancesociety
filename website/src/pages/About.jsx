@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 import AboutSection from "../components/AboutInfo.jsx";
 import Footer from "../components/Footer.jsx";
-import teamBg from "../assets/backgrounds/team.jpg";
+import aboutBg from "../assets/backgrounds/about.jpg";
 
 export default function About() {
   return (
@@ -13,7 +13,7 @@ export default function About() {
       {/* HERO */}
       <Hero
 
-        backgroundImage={teamBg}
+        backgroundImage={aboutBg}
 
         label="WHO WE ARE"
 

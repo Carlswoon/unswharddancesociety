@@ -1,6 +1,7 @@
 // aboutus.jsx
 
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   const canvasRef = useRef(null);
@@ -531,48 +532,48 @@ export default function AboutUs() {
               memories.
 
             </p>
+            <Link to="/about">
+              <button className="
+                group
+                relative
+                overflow-hidden
+                border
+                border-[#9333ea]
+                hover:border-[#c084fc]
+                transition-all
 
-            <button className="
-              group
-              relative
-              overflow-hidden
-              border
-              border-[#9333ea]
-              hover:border-[#c084fc]
-              transition-all
+                px-8 py-4
+                sm:px-10 sm:py-5
 
-              px-8 py-4
-              sm:px-10 sm:py-5
+                rounded-[1.3rem]
 
-              rounded-[1.3rem]
-
-              inline-flex
-              items-center
-              gap-5
-            ">
-
-              <div className="absolute inset-0 bg-gradient-to-r from-[#9333ea]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <span className="
-                relative z-10
-                font-semibold
-                tracking-wide
-
-                text-base
-                sm:text-lg
+                inline-flex
+                items-center
+                gap-5
               ">
 
-                LEARN MORE
+                <div className="absolute inset-0 bg-gradient-to-r from-[#9333ea]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              </span>
+                <span className="
+                  relative z-10
+                  font-semibold
+                  tracking-wide
 
-              <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
+                  text-base
+                  sm:text-lg
+                ">
 
-                →
+                  LEARN MORE
 
-              </span>
+                </span>
 
-            </button>
+                <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
+
+                  →
+
+                </span>
+              </button>
+            </Link>
           </div>
 
           {/* CENTER */}
@@ -671,54 +672,56 @@ export default function AboutUs() {
                   more.
 
                 </p>
+                
+                <a
+                  href="https://instagram.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    group
+                    relative
+                    overflow-hidden
 
-                <button className="
-                  group
-                  relative
-                  overflow-hidden
+                    bg-gradient-to-b
+                    from-[#d946ef]
+                    to-[#9333ea]
 
-                  bg-gradient-to-b
-                  from-[#d946ef]
-                  to-[#9333ea]
+                    hover:brightness-110
 
-                  hover:brightness-110
+                    transition-all
 
-                  transition-all
+                    px-8 py-4
+                    sm:px-10 sm:py-5
 
-                  px-8 py-4
-                  sm:px-10 sm:py-5
+                    rounded-[1.2rem]
 
-                  rounded-[1.2rem]
+                    inline-flex
+                    items-center
+                    gap-5
 
-                  inline-flex
-                  items-center
-                  gap-5
-
-                  shadow-[0_0_50px_rgba(168,85,247,0.45)]
-                ">
+                    shadow-[0_0_50px_rgba(168,85,247,0.45)]
+                  "
+                >
 
                   <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                  <span className="
-                    relative z-10
-                    font-semibold
-                    tracking-wide
+                  <span
+                    className="
+                      relative z-10
+                      font-semibold
+                      tracking-wide
 
-                    text-base
-                    sm:text-lg
-                  ">
-
+                      text-base
+                      sm:text-lg
+                    "
+                  >
                     JOIN NOW
-
                   </span>
 
                   <span className="relative z-10 text-2xl group-hover:translate-x-1 transition-transform">
-
                     →
-
                   </span>
-
-                </button>
+                </a>
               </div>
             </div>
           </div>

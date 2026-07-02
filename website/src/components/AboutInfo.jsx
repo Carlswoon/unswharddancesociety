@@ -9,7 +9,7 @@ import {
   Globe,
 } from "lucide-react";
 
-import crowdImage from "../assets/backgrounds/team.jpg";
+import crowdImage from "../assets/backgrounds/about2.jpg";
 
 const missionCards = [
   {

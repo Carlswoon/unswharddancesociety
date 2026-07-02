@@ -11,6 +11,9 @@ import parisha from "../assets/team/parisha.png";
 import vanessa from "../assets/team/vanessa.png";
 import vlad from "../assets/team/vlad.png";
 import rita from "../assets/team/rita.png"
+import andrew from "../assets/team/andrew.png"
+import jessie from "../assets/team/jessie.png"
+import katon from "../assets/team/katon.png"
 
 const filters = [
   "All",
@@ -32,7 +35,7 @@ const teamMembers = [
 
     image: vanessa,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 
   {
@@ -41,11 +44,11 @@ const teamMembers = [
     department: "Executive",
 
     description:
-      "your mum",
+      "likes BBC",
 
     image: carlson,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 
   {
@@ -58,7 +61,7 @@ const teamMembers = [
 
     image: bel,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 
   {
@@ -71,7 +74,7 @@ const teamMembers = [
 
     image: parisha,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
     name: "Vladyslav Klymenko",
@@ -83,7 +86,7 @@ const teamMembers = [
 
     image: vlad,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
     name: "Madison Virtudazo",
@@ -95,7 +98,7 @@ const teamMembers = [
 
     image: madison,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
     name: "Rita Nip",
@@ -107,7 +110,43 @@ const teamMembers = [
 
     image: rita,
 
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Andrew Pham",
+    role: "Director",
+    department: "Events",
+
+    description:
+      "your mum",
+
+    image: andrew,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Jessie Keep",
+    role: "Director",
+    department: "Marketing",
+
+    description:
+      "your mum",
+
+    image: jessie,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Katon Junaidi",
+    role: "Director",
+    department: "HR",
+
+    description:
+      "your mum",
+
+    image: katon,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 ];
 

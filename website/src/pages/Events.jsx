@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 import EventSection from "../components/EventSection.jsx";
 import Footer from "../components/Footer.jsx";
-import teamBg from "../assets/backgrounds/team.jpg";
+import eventsBg from "../assets/backgrounds/events.jpg";
 
 export default function Event() {
   return (
@@ -13,7 +13,7 @@ export default function Event() {
       {/* HERO */}
       <Hero
 
-        backgroundImage={teamBg}
+        backgroundImage={eventsBg}
 
         label="WHO WE ARE"
 
