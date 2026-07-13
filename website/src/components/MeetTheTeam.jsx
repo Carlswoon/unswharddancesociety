@@ -14,6 +14,11 @@ import rita from "../assets/team/rita.png"
 import andrew from "../assets/team/andrew.png"
 import jessie from "../assets/team/jessie.png"
 import katon from "../assets/team/katon.png"
+import kat from "../assets/team/kat.png"
+import karl from "../assets/team/karl.png"
+import elijah from "../assets/team/elijah.png"
+import stephy from "../assets/team/stephy.png"
+import krish from "../assets/team/krish.png"
 
 const filters = [
   "All",
@@ -145,6 +150,66 @@ const teamMembers = [
       "your mum",
 
     image: katon,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Kathryn Tia",
+    role: "Subcomm",
+    department: "Sponsorship",
+
+    description:
+      "your mum",
+
+    image: kat,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Karl Ye",
+    role: "Subcomm",
+    department: "Sponsorship",
+
+    description:
+      "your mum",
+
+    image: karl,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Elijah Gulliver",
+    role: "Subcomm",
+    department: "Sponsorship",
+
+    description:
+      "your mum",
+
+    image: elijah,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Stephy Wu",
+    role: "Subcomm",
+    department: "Events",
+
+    description:
+      "your mum",
+
+    image: stephy,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Krishnangshu Talukdar",
+    role: "Subcomm",
+    department: "HR",
+
+    description:
+      "your mum",
+
+    image: krish,
 
     instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },

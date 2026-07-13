@@ -17,15 +17,11 @@ export default function Home() {
 
         backgroundImage={heroBg}
 
-        label="UNITED BY MUSIC"
+        label="UNSW Hard Dance Society"
 
         title={
-          <>
-            HARDER.
-
-            <br />
-
-            TOGETHER.
+          <div className="text-[0.8em]">
+            YOUR NEW
 
             <br />
 
@@ -39,15 +35,13 @@ export default function Home() {
                 text-transparent
               "
             >
-              FOREVER.
+              RAVE FAMILY
             </span>
-          </>
+          </div>
         }
 
         description="
-          The home of Hard Dance at UNSW.
-          Bringing the community together
-          through our passion for harder styles.
+        More than just a society, we're one big rave family. United by PLUR and our love for hard dance, we welcome everyone from first-time ravers to veterans. Come along to our events, socials, and workshops and be part of the community.
         "
 
         primaryButton={{
