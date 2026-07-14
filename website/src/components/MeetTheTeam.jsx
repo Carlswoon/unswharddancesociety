@@ -19,6 +19,8 @@ import karl from "../assets/team/karl.png"
 import elijah from "../assets/team/elijah.png"
 import stephy from "../assets/team/stephy.png"
 import krish from "../assets/team/krish.png"
+import mina from "../assets/team/mina.png"
+import charvi from "../assets/team/charvi.png"
 
 const filters = [
   "All",
@@ -210,6 +212,30 @@ const teamMembers = [
       "your mum",
 
     image: krish,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Mina Boonyanuch Aiemchamrat",
+    role: "Subcomm",
+    department: "HR",
+
+    description:
+      "your mum",
+
+    image: mina,
+
+    instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+  {
+    name: "Charvi Khanna",
+    role: "Subcomm",
+    department: "Marketing",
+
+    description:
+      "your mum",
+
+    image: charvi,
 
     instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
