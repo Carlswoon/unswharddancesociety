@@ -216,7 +216,7 @@ const teamMembers = [
     instagram: "https://www.instagram.com/unswharddancesoc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
-    name: "Mina Boonyanuch Aiemchamrat",
+    name: "Mina Aiemchamrat",
     role: "Subcomm",
     department: "HR",
 
