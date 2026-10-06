@@ -4,71 +4,8 @@ import { useState } from "react";
 
 import EventCard2 from "./EventCard2";
 
-import winterRaveImage from "../assets/events/event 11.jpg";
-import winterRaveImage2 from "../assets/events/event 12.png";
-
-// =========================
-// EVENTS
-// =========================
-
-const events = [
-  {
-    date: "2026-07-10",
-
-    genre: "Hardstyle",
-
-    title: "WINTER RAVE",
-
-    description:
-      "A massive indoor rave to kick off winter. High energy, heavy kicks, unforgettable vibes.",
-
-    location: "Arcadium, Sydney",
-    time: "10:00PM - 4:00AM",
-    age: "18+ Event",
-
-    image: winterRaveImage,
-
-    link: "https://events.humanitix.com",
-  },
-
-  {
-    date: "2026-05-18",
-
-    genre: "Rawstyle",
-
-    title: "RAW ENERGY",
-
-    description:
-      "A night of relentless kicks and euphoric chaos.",
-
-    location: "Sydney Warehouse",
-    time: "9:00PM - 3:00AM",
-    age: "18+ Event",
-
-    image: winterRaveImage2,
-
-    link: "https://events.humanitix.com",
-  },
-
-  {
-    date: "2026-12-18",
-
-    genre: "Rawstyle",
-
-    title: "RAW ENERGY",
-
-    description:
-      "A night of relentless kicks and euphoric chaos.",
-
-    location: "Sydney Warehouse",
-    time: "9:00PM - 3:00AM",
-    age: "18+ Event",
-
-    image: winterRaveImage2,
-
-    link: "https://events.humanitix.com",
-  },
-];
+import EventEmptyState from "./EventEmptyState";
+import { events, getEventsByPeriod } from "../data/events";
 
 export default function EventSection() {
 
@@ -79,45 +16,8 @@ export default function EventSection() {
   const [activeFilter, setActiveFilter] =
     useState("Upcoming");
 
-  // =========================
-  // CURRENT DATE
-  // =========================
-
-  const now = new Date();
-
-  // =========================
-  // UPCOMING EVENTS
-  // =========================
-
-  const upcomingEvents = events
-
-    .filter(
-      (event) =>
-        new Date(event.date) >= now
-    )
-
-    .sort(
-      (a, b) =>
-        new Date(a.date) -
-        new Date(b.date)
-    );
-
-  // =========================
-  // PAST EVENTS
-  // =========================
-
-  const pastEvents = events
-
-    .filter(
-      (event) =>
-        new Date(event.date) < now
-    )
-
-    .sort(
-      (a, b) =>
-        new Date(b.date) -
-        new Date(a.date)
-    );
+  const { upcoming: upcomingEvents, past: pastEvents } =
+    getEventsByPeriod(events);
 
   // =========================
   // FILTERED EVENTS
@@ -132,7 +32,7 @@ export default function EventSection() {
 
     <section className="px-6 py-24">
 
-      <div className="class=relative z-10 max-w-[1800px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 py-16">
+      <div className="relative z-10 max-w-[1800px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 py-16">
 
         {/* FILTER BAR */}
         <div
@@ -158,6 +58,7 @@ export default function EventSection() {
           {/* UPCOMING */}
           <button
 
+            aria-pressed={activeFilter === "Upcoming"}
             onClick={() =>
               setActiveFilter("Upcoming")
             }
@@ -208,6 +109,7 @@ export default function EventSection() {
           {/* PAST */}
           <button
 
+            aria-pressed={activeFilter === "Past"}
             onClick={() =>
               setActiveFilter("Past")
             }
@@ -260,24 +162,30 @@ export default function EventSection() {
         {/* EVENTS */}
         <div className="space-y-8">
 
+          {filteredEvents.length === 0 && (
+            <EventEmptyState past={activeFilter === "Past"} />
+          )}
+
           {filteredEvents.map((event) => (
 
             <EventCard2
-              key={event.title}
+              key={event.id}
 
-              month={new Date(event.date)
+              month={new Date(`${event.date}T12:00:00+10:00`)
                 .toLocaleString("en-US", {
                   month: "short",
+                  timeZone: "Australia/Sydney",
                 })
                 .toUpperCase()}
 
               day={String(
-                new Date(event.date).getDate()
+                event.date.slice(8, 10)
               ).padStart(2, "0")}
 
-              weekday={new Date(event.date)
+              weekday={new Date(`${event.date}T12:00:00+10:00`)
                 .toLocaleString("en-US", {
                   weekday: "short",
+                  timeZone: "Australia/Sydney",
                 })
                 .toUpperCase()}
 
