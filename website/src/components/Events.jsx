@@ -1,10 +1,12 @@
 import EventCard from "./EventCard";
 
-import event1 from "../assets/events/event 1.png";
-import event2 from "../assets/events/event 2.png";
-import event3 from "../assets/events/event 3.png";
+import { Link } from "react-router-dom";
+import EventEmptyState from "./EventEmptyState";
+import { events, getEventsByPeriod } from "../data/events";
 
 function Events() {
+  const { upcoming } = getEventsByPeriod(events);
+
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-28">
 
@@ -79,7 +81,8 @@ function Events() {
             </div>
 
             {/* CTA */}
-            <button
+            <Link
+              to="/events"
               className="
                 group
                 flex items-center
@@ -110,7 +113,7 @@ function Events() {
                 →
               </span>
 
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -131,35 +134,25 @@ function Events() {
           "
         >
 
-          <div className="w-full max-w-[420px]">
-            <EventCard
-              image={event1}
-              month="Jun"
-              date="07"
-              title="Winter Rave"
-              venue="Arcadium, Sydney"
-            />
-          </div>
-
-          <div className="w-full max-w-[420px]">
-            <EventCard
-              image={event2}
-              month="Jun"
-              date="21"
-              title="Hardstyle Collective"
-              venue="The Abercrombie, Sydney"
-            />
-          </div>
-
-          <div className="w-full max-w-[420px] sm:col-span-2 xl:col-span-1 sm:justify-self-center">
-            <EventCard
-              image={event3}
-              month="Jul"
-              date="12"
-              title="Euphoric Nights"
-              venue="I. Port Warehouse, Sydney"
-            />
-          </div>
+          {upcoming.length === 0 ? (
+            <div className="w-full sm:col-span-2 xl:col-span-3">
+              <EventEmptyState />
+            </div>
+          ) : upcoming.slice(0, 3).map((event) => (
+            <div key={event.id} className="w-full max-w-[420px]">
+              <EventCard
+                image={event.image}
+                month={new Date(`${event.date}T12:00:00+10:00`).toLocaleString("en-AU", {
+                  month: "short",
+                  timeZone: "Australia/Sydney",
+                })}
+                date={event.date.slice(8, 10)}
+                title={event.title}
+                venue={event.location}
+                time={event.time}
+              />
+            </div>
+          ))}
 
         </div>
       </div>
